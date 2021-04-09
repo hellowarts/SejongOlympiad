@@ -1,0 +1,13 @@
+a, b = input().split()
+a = int(a)
+b = int(b)
+
+n = a ^ b
+
+count = 0
+
+for i in range(32):
+    if n & 1: count += 1
+    n >>= 1
+
+print(count)
