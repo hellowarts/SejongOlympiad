@@ -1,6 +1,0 @@
-n = int(input())
-r = 0
-while(True):
-    if n<=0 : break
-    if n%10 != 0: print(n%10,end='')
-    n = n // 10
