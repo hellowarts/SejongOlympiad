@@ -1,0 +1,9 @@
+def reverse(num):
+    rNum = ""
+    for i in num:
+        rNum = i + rNum
+    return int(rNum)
+    
+num = input()
+    
+print(reverse(num))
