@@ -1,0 +1,8 @@
+n = int(input())
+data = input()
+count = 0
+
+for i in data:
+    if i=='@': count += 1
+
+print(count)
