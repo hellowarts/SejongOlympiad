@@ -1,0 +1,14 @@
+n = int(input())
+length = input()
+before = length[0]
+_max = 0
+count = 0
+
+for n in length:
+    if n == before: count += 1
+    else: count = 1
+
+    if _max < count: _max = count
+    before = n
+
+print(_max)
