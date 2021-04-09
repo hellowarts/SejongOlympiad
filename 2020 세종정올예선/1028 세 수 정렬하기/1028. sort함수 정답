@@ -1,0 +1,7 @@
+numbers = list(map(int, input().split()))
+
+if numbers[0]==numbers[1] or numbers[1]==numbers[2] or numbers[2]==numbers[0]:
+    print("Impossible")
+else:
+    numbers.sort()
+    print(numbers[0],numbers[1],numbers[2])
