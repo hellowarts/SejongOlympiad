@@ -1,0 +1,7 @@
+def f(n):
+    if n<=0 : return
+    if n%10 != 0: print(n%10,end='')
+    f(n//10)
+
+n = int(input())
+f(n)
