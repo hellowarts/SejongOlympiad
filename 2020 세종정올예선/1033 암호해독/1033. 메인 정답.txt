@@ -1,0 +1,10 @@
+arr = input()
+data = ""
+
+for i in arr:
+    
+    ch = ord(i)
+    if 65 <= ch and ch <= 69 : data = data + str(ch-65)
+    elif 97<= ch and ch <= 101: data = data + str(ch-92)
+
+print(int(data))
