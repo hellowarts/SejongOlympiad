@@ -1,18 +1,18 @@
 def solve(data):
     plus = 0
     for i in data:
-        if(plus == 0 and ord(i) == ord(')')):
-            print("NO")
+        if(plus == 0 and i == ')'):
+            print("bad")
             return
-        if ord(i) == ord('('):
+        if i == '(':
             plus += 1
-        if ord(i) == ord(')'):
+        if i == ')':
             plus -= 1
     if plus == 0:
-        print("YES")
+        print("good")
         return
     else:
-        print("NO")
+        print("bad")
         return 
         
 
