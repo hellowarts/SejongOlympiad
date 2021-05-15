@@ -11,7 +11,7 @@ nums.sort()
 
 befor = -1
 
-for i in range(n):
-    if befor != nums[i]:
-        print(str(nums[i])+":"+str(count[i+1]))
-        befor = nums[i]
+print("3:"+str(count[3]))
+print("13:"+str(count[13]))
+print("31:"+str(count[31]))
+print("303:"+str(count[303]))
