@@ -1,23 +1,16 @@
-n = int(input())
-St = [[0]*n for i in range(n)]
-St_ch = [0]*n
+num , switch = input().split()
+switch = int(switch)
 
-def call(N):
-    global St, St_ch, n
-    St_ch[N] = 1
-    for i in range(n):
-        if St[N][i]:
-            if not St_ch[i]:
-                call(i)
+length = len(num)
+num_f = [0]* length
+num_s = [0]* length
 
-for i in range(n):
-        St[i] = list(map(int, input().split()))
-        
-count = 0
-for i in range(n):
-    if(not St_ch[i]):
-        call(i)
-        count += 1
+for i in range(length):
+    num_f[i] = int(num[i])
 
-print(count)
-    
+for i in range(length):
+    ch = i + switch
+    ch %= length
+    num_s[ch] = num_f[i]
+for i in num_s:
+    print(i, end="")
