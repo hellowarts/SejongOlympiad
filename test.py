@@ -1,13 +1,17 @@
-nM, nD, mM, mD = map(int, input().split())
+n = int(input())
+nums = list(map(int, input().split()))
 
-month = [31,28,31,30,31,30,31,31,30,31,30,31]
+count = [0]*1000000
 
-day = 0
+for i in nums:
+    try: count[i] += 1
+    except: count[i]=1
 
-for i in range(nM, mM-1):
-    day += month[i]
+nums.sort()
 
-day += mD
-day += month[nM-1] - nD
+befor = -1
 
-print("D-"+str(day))
+for i in range(n):
+    if befor != nums[i]:
+        print(str(nums[i])+":"+str(count[i+1]))
+        befor = nums[i]
